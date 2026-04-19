@@ -1,0 +1,35 @@
+---
+description: Procurement co-pilot chat — retrieval, LLM, fallback, and UI contract
+alwaysApply: true
+---
+
+# Procurement co-pilot (Decision Support chat)
+
+## Intended behavior
+
+- **Open-ended questions**: The assistant must answer from **retrieved database context** (SQLite materials, suppliers, BOM signals, same scoring as `/api/recommend`), optionally enriched by **Groq** when `GROQ_API_KEY` is set.
+- **When data is missing**: Respond with **one clarifying question** (e.g. ask for SKU fragment, numeric material id, or priority like cost vs risk)—not a fixed marketing line.
+- **Partial matches**: Give the **closest relevant** answer from context and state what is still unknown.
+- **Do not** invent specific percentages, supplier names, or SKUs that are not in the context block or retrieval pipeline.
+
+## Implementation map
+
+| Layer | Role |
+|-------|------|
+| `backend/app/chat_retrieval.py` | Token/RM-\* / numeric id resolution, SKU keyword search, `build_data_context()`, rule-based `fallback_reply()` |
+| `backend/app/llm.py` | `generate_procurement_chat_reply()` — system prompt enforces grounding; returns `None` if no client or on failure |
+| `backend/app/main.py` | `POST /api/chat` — runs retrieval → LLM → **fallback** if LLM unavailable |
+| `frontend/src/lib/api.ts` | `postProcurementChat()` → `POST /api/chat` |
+| `frontend/src/pages/DecisionSupport.tsx` | Real chat UI; suggested chips **submit** the question (no second click) |
+
+## Frontend contract
+
+- Request body: `{ message: string, history?: { role: 'user' \| 'assistant', content: string }[] }` (last turns only; server truncates).
+- Dev: Vite proxies `/api` → Python on port **8000** (`frontend/vite.config.ts`). If nothing listens on 8000, the proxy returns **502**; from repo root use **`npm run dev:all`** (starts Vite + uvicorn). If the API is still unreachable, `postProcurementChat` falls back to **`chatFallback.ts`** (mockData in the browser).
+- Prod / tunneling: optional **`VITE_API_URL`** = absolute origin of FastAPI (no trailing slash); otherwise same-origin `/api/*`.
+
+## Changing behavior safely
+
+- Adjust tone/length in `llm.py` (`_CHAT_SYSTEM` and `generate_procurement_chat_reply`).
+- Adjust keyword logic or synonyms in `chat_retrieval.py` (`fallback_reply` and `pick_material_ids_for_context`).
+- Keep `/api/recommend` and retrieval scoring aligned when changing feature weights (`features.py` / `scoring.py`).

@@ -1,0 +1,188 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Spheremaxxing Design System
+   Dark enterprise SaaS palette: deep navy, electric blue, silver, subtle teal.
+   All colors HSL.
+*/
+
+@layer base {
+  :root {
+    /* Default to dark theme — this is an enterprise dark dashboard */
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+
+    --card: 222 40% 9%;
+    --card-foreground: 210 40% 96%;
+    --card-elevated: 222 38% 12%;
+
+    --popover: 222 44% 8%;
+    --popover-foreground: 210 40% 96%;
+
+    --primary: 213 94% 60%;
+    --primary-foreground: 222 47% 6%;
+    --primary-glow: 199 89% 65%;
+
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 40% 96%;
+
+    --muted: 222 28% 13%;
+    --muted-foreground: 215 18% 60%;
+
+    --accent: 180 70% 50%;
+    --accent-foreground: 222 47% 6%;
+
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+
+    --success: 152 65% 45%;
+    --success-foreground: 222 47% 6%;
+
+    --warning: 38 95% 58%;
+    --warning-foreground: 222 47% 6%;
+
+    --border: 222 30% 16%;
+    --input: 222 30% 14%;
+    --ring: 213 94% 60%;
+
+    --radius: 0.75rem;
+
+    /* Gradients */
+    --gradient-primary: linear-gradient(135deg, hsl(213 94% 60%), hsl(199 89% 65%));
+    --gradient-accent: linear-gradient(135deg, hsl(213 94% 55%), hsl(180 70% 50%));
+    --gradient-surface: linear-gradient(180deg, hsl(222 40% 10%), hsl(222 44% 7%));
+    --gradient-glow: radial-gradient(circle at 50% 0%, hsl(213 94% 60% / 0.18), transparent 60%);
+    --gradient-mesh: radial-gradient(at 20% 10%, hsl(213 94% 60% / 0.15) 0px, transparent 50%),
+                     radial-gradient(at 80% 0%, hsl(180 70% 50% / 0.10) 0px, transparent 50%),
+                     radial-gradient(at 0% 90%, hsl(199 89% 65% / 0.08) 0px, transparent 50%);
+
+    /* Shadows */
+    --shadow-elegant: 0 10px 30px -10px hsl(213 94% 30% / 0.45);
+    --shadow-glow: 0 0 40px hsl(213 94% 60% / 0.25);
+    --shadow-card: 0 1px 0 0 hsl(0 0% 100% / 0.04) inset, 0 8px 24px -12px hsl(222 47% 2% / 0.6);
+
+    /* Sidebar */
+    --sidebar-background: 222 50% 5%;
+    --sidebar-foreground: 215 18% 70%;
+    --sidebar-primary: 213 94% 60%;
+    --sidebar-primary-foreground: 222 47% 6%;
+    --sidebar-accent: 222 35% 11%;
+    --sidebar-accent-foreground: 210 40% 96%;
+    --sidebar-border: 222 35% 12%;
+    --sidebar-ring: 213 94% 60%;
+
+    /* Transitions */
+    --transition-smooth: cubic-bezier(0.4, 0, 0.2, 1);
+  }
+
+  /* Keep .dark identical so dark utilities still work if toggled */
+  .dark {
+    --background: 222 47% 6%;
+    --foreground: 210 40% 96%;
+    --card: 222 40% 9%;
+    --card-foreground: 210 40% 96%;
+    --popover: 222 44% 8%;
+    --popover-foreground: 210 40% 96%;
+    --primary: 213 94% 60%;
+    --primary-foreground: 222 47% 6%;
+    --secondary: 222 30% 14%;
+    --secondary-foreground: 210 40% 96%;
+    --muted: 222 28% 13%;
+    --muted-foreground: 215 18% 60%;
+    --accent: 180 70% 50%;
+    --accent-foreground: 222 47% 6%;
+    --destructive: 0 72% 55%;
+    --destructive-foreground: 210 40% 98%;
+    --border: 222 30% 16%;
+    --input: 222 30% 14%;
+    --ring: 213 94% 60%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  html {
+    @apply dark;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-feature-settings: "cv02", "cv03", "cv04", "cv11", "ss01";
+    background-image: var(--gradient-mesh);
+    background-attachment: fixed;
+  }
+
+  /* Custom scrollbar */
+  ::-webkit-scrollbar {
+    width: 10px;
+    height: 10px;
+  }
+  ::-webkit-scrollbar-track {
+    background: hsl(var(--background));
+  }
+  ::-webkit-scrollbar-thumb {
+    background: hsl(var(--border));
+    border-radius: 8px;
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: hsl(var(--muted-foreground) / 0.5);
+  }
+}
+
+@layer components {
+  .glass-panel {
+    @apply bg-card/60 backdrop-blur-xl border border-border/60;
+    box-shadow: var(--shadow-card);
+  }
+
+  .metric-card {
+    @apply rounded-xl p-5 bg-card border border-border/60 transition-all duration-300;
+    box-shadow: var(--shadow-card);
+  }
+  .metric-card:hover {
+    @apply border-primary/40;
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-elegant);
+  }
+
+  .gradient-text {
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  }
+
+  .glow-ring {
+    box-shadow: var(--shadow-glow);
+  }
+
+  .data-row {
+    @apply transition-colors duration-200 hover:bg-secondary/40;
+  }
+
+  .status-dot {
+    @apply inline-block h-1.5 w-1.5 rounded-full;
+  }
+}
+
+@layer utilities {
+  .animate-pulse-glow {
+    animation: pulseGlow 2.5s ease-in-out infinite;
+  }
+  @keyframes pulseGlow {
+    0%, 100% { box-shadow: 0 0 0 0 hsl(var(--primary) / 0.5); }
+    50% { box-shadow: 0 0 0 8px hsl(var(--primary) / 0); }
+  }
+
+  .animate-fade-in {
+    animation: fadeIn 0.4s ease-out both;
+  }
+  @keyframes fadeIn {
+    from { opacity: 0; transform: translateY(6px); }
+    to { opacity: 1; transform: translateY(0); }
+  }
+}
