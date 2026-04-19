@@ -1,0 +1,1325 @@
+{
+    "FG-iherb-10421": {
+        "name": "FG-iherb-10421",
+        "required_certifications": [
+            "Soy Free",
+            "Gluten Free",
+            "GMO Free"
+        ]
+    },
+    "FG-iherb-116514": {
+        "name": "FG-iherb-116514",
+        "required_certifications": [
+            "Gluten Free",
+            "Halal"
+        ]
+    },
+    "FG-iherb-71022": {
+        "name": "FG-iherb-71022",
+        "required_certifications": [
+            "Non-GMO",
+            "Gluten-Free",
+            "Keto-Friendly",
+            "Vegan"
+        ]
+    },
+    "FG-iherb-52816": {
+        "name": "FG-iherb-52816",
+        "required_certifications": [
+            "Vegetarian",
+            "Organic",
+            "Non-GMO",
+            "Gluten-Free",
+            "Kosher",
+            "No Artificial Flavors",
+            "No Artificial Colors",
+            "Contains Soy"
+        ]
+    },
+    "FG-iherb-14689": {
+        "name": "FG-iherb-14689",
+        "required_certifications": [
+            "Non-GMO",
+            "Gluten-Free",
+            "Wheat-Free",
+            "Dairy-Free",
+            "Kosher"
+        ]
+    },
+    "FG-iherb-27509": {
+        "name": "FG-iherb-27509",
+        "required_certifications": [
+            "Gluten-Free",
+            "No Artificial Growth Hormones"
+        ]
+    },
+    "FG-iherb-105065": {
+        "name": "FG-iherb-105065",
+        "required_certifications": [
+            "Vegan",
+            "Gluten-Free",
+            "Dairy-Free",
+            "Soy-Free",
+            "No Preservatives",
+            "No Artificial Flavors",
+            "No Artificial Sweeteners",
+            "No Artificial Colors",
+            "Non-GMO",
+            "Kosher",
+            "Cruelty-Free",
+            "Vegetarian"
+        ]
+    },
+    "FG-iherb-5452": {
+        "name": "FG-iherb-5452",
+        "required_certifications": [
+            "Vegan"
+        ]
+    },
+    "FG-iherb-698": {
+        "name": "FG-iherb-698",
+        "required_certifications": [
+            "Vegan",
+            "Vegetarian",
+            "Gluten-Free",
+            "Dairy-Free",
+            "Kosher",
+            "Non-GMO"
+        ]
+    },
+    "FG-iherb-119107": {
+        "name": "FG-iherb-119107",
+        "required_certifications": [
+            "Gluten-Free",
+            "Vegan",
+            "No Known Allergens"
+        ]
+    },
+    "FG-iherb-2582": {
+        "name": "FG-iherb-2582",
+        "required_certifications": [
+            "Vegan",
+            "Kosher",
+            "Non-GMO",
+            "Gluten-Free",
+            "Cruelty-Free",
+            "Organic",
+            "Ketogenic-Diet",
+            "Dairy-Free",
+            "Vegetarian",
+            "Paleo"
+        ]
+    },
+    "FG-iherb-12222": {
+        "name": "FG-iherb-12222",
+        "required_certifications": [
+            "Vegetarian",
+            "Grass-Fed",
+            "Certified Gluten-Free",
+            "Non-GMO",
+            "No Artificial Flavors",
+            "Soy-Free",
+            "rBGH/rBST-Free",
+            "Lactose-Free",
+            "Kosher Dairy"
+        ]
+    },
+    "FG-iherb-cen-27493": {
+        "name": "FG-iherb-cen-27493",
+        "required_certifications": [
+            "Non-GMO",
+            "Gluten-Free",
+            "No Artificial Sweeteners",
+            "No Artificial Flavors"
+        ]
+    },
+    "FG-thrive-market-671635734464": {
+        "name": "FG-thrive-market-671635734464",
+        "required_certifications": [
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Gluten-Free",
+            "High in Protein",
+            "Ketogenic",
+            "Organic",
+            "Pasture-Raised",
+            "Plastic Neutral Certified",
+            "Sugar-Free",
+            "Vegetarian"
+        ]
+    },
+    "FG-thrive-market-thrive-market-organic-whey-protein-vanilla": {
+        "name": "FG-thrive-market-thrive-market-organic-whey-protein-vanilla",
+        "required_certifications": [
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Gluten-Free",
+            "High in Protein",
+            "Ketogenic",
+            "Organic",
+            "Pasture-Raised",
+            "Plastic Neutral Certified",
+            "Sugar-Free",
+            "Vegetarian"
+        ]
+    },
+    "FG-thrive-market-cure-hydration-electrolyte-drink-mix-jar-berry-pomegranate": {
+        "name": "FG-thrive-market-cure-hydration-electrolyte-drink-mix-jar-berry-pomegranate",
+        "required_certifications": [
+            "Certified B Corporation",
+            "Contains Coconut",
+            "Dairy-Free",
+            "Gluten-Free",
+            "Ketogenic",
+            "Paleo",
+            "Plastic Neutral Certified",
+            "Vegan",
+            "Vegetarian"
+        ]
+    },
+    "FG-thrive-market-thorne-vitamin-d-5-000": {
+        "name": "FG-thrive-market-thorne-vitamin-d-5-000",
+        "required_certifications": [
+            "Ketogenic",
+            "Gluten-Free",
+            "Paleo",
+            "Dairy-Free",
+            "Vegetarian",
+            "GLP-1 Friendly",
+            "Mediterranean Diet",
+            "Whole30 Compatible",
+            "NSF Certified for Sport",
+            "Soy-Free"
+        ]
+    },
+    "FG-thrive-market-jarrow-formulas-vitamin-d3-supplement": {
+        "name": "FG-thrive-market-jarrow-formulas-vitamin-d3-supplement",
+        "required_certifications": [
+            "Gluten-Free",
+            "Dairy-Free",
+            "GLP-1 Friendly",
+            "Tree Nut-Free",
+            "Grain-Free",
+            "Soy-Free",
+            "Peanut-Free",
+            "Synthetic Dye/Color Additive-Free",
+            "Egg-Free",
+            "Fish-Free",
+            "Shellfish-Free",
+            "Wheat-Free",
+            "Sesame-Free"
+        ]
+    },
+    "FG-thrive-market-6009804424153": {
+        "name": "FG-thrive-market-6009804424153",
+        "required_certifications": [
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Gluten-Free",
+            "Ketogenic",
+            "Plastic Neutral Certified",
+            "Sugar-Free",
+            "Vegetarian"
+        ]
+    },
+    "FG-thrive-market-new-chapter-every-womans-one-daily-multivitamin-40-plus": {
+        "name": "FG-thrive-market-new-chapter-every-womans-one-daily-multivitamin-40-plus",
+        "required_certifications": [
+            "Ketogenic",
+            "Organic",
+            "Gluten-Free",
+            "Dairy-Free",
+            "Vegetarian",
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Non-GMO Project Verified",
+            "Caffeine-Free",
+            "Contains Soy"
+        ]
+    },
+    "FG-thrive-market-ritual-mens-multivitamin-18": {
+        "name": "FG-thrive-market-ritual-mens-multivitamin-18",
+        "required_certifications": [
+            "Gluten-Free",
+            "Dairy-Free",
+            "Vegetarian",
+            "Vegan",
+            "Clean Label Project Certified & Purity Award",
+            "Certified B Corporation",
+            "Non-GMO",
+            "GLP-1 Friendly",
+            "Soy-Free"
+        ]
+    },
+    "FG-thrive-market-aloha-vanilla-protein-powder": {
+        "name": "FG-thrive-market-aloha-vanilla-protein-powder",
+        "required_certifications": [
+            "Organic",
+            "Gluten-Free",
+            "Dairy-Free",
+            "Vegetarian",
+            "Vegan",
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Non-GMO",
+            "Keto Friendly",
+            "Soy-Free",
+            "Paleo",
+            "Low Carb",
+            "Low Sugar",
+            "No Sugar Alcohols",
+            "Stevia-Free",
+            "Contains: Coconut"
+        ]
+    },
+    "FG-thrive-market-ultima-replenisher-passionfruit": {
+        "name": "FG-thrive-market-ultima-replenisher-passionfruit",
+        "required_certifications": [
+            "Ketogenic",
+            "Gluten-Free",
+            "Dairy-Free",
+            "Vegetarian",
+            "Vegan",
+            "Non-GMO",
+            "Alpha-Gal Free",
+            "Tree Nut-Free"
+        ]
+    },
+    "FG-thrive-market-drink-lmnt-electrolyte-drink-mix-grapefruit-salt": {
+        "name": "FG-thrive-market-drink-lmnt-electrolyte-drink-mix-grapefruit-salt",
+        "required_certifications": [
+            "Dairy-Free",
+            "Vegetarian",
+            "Vegan",
+            "Alpha-Gal Free",
+            "Tree Nut-Free",
+            "Wheat-Free",
+            "Sesame-Free",
+            "Fish-Free"
+        ]
+    },
+    "FG-thrive-market-simply-tera-s-whey-organic-whey-protein": {
+        "name": "FG-thrive-market-simply-tera-s-whey-organic-whey-protein",
+        "required_certifications": [
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Gluten-Free",
+            "High in Protein",
+            "Ketogenic",
+            "Organic",
+            "Pasture-Raised",
+            "Plastic Neutral Certified",
+            "Sugar-Free",
+            "Vegetarian"
+        ]
+    },
+    "FG-thrive-market-671635733788": {
+        "name": "FG-thrive-market-671635733788",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free",
+            "Titanium Dioxide-Free"
+        ]
+    },
+    "FG-thrive-market-wellmade-real-food-organic-womens-multivitamin": {
+        "name": "FG-thrive-market-wellmade-real-food-organic-womens-multivitamin",
+        "required_certifications": [
+            "Organic",
+            "Vegetarian",
+            "Vegan",
+            "Plant-Based",
+            "Non-GMO",
+            "Plastic Neutral Certified",
+            "Certified B Corporation"
+        ]
+    },
+    "FG-thrive-market-new-chapter-mens-advanced-multivitamin": {
+        "name": "FG-thrive-market-new-chapter-mens-advanced-multivitamin",
+        "required_certifications": [
+            "Ketogenic",
+            "Organic",
+            "Gluten-Free",
+            "Dairy-Free",
+            "Vegetarian",
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Non-GMO Project Verified",
+            "Caffeine-Free",
+            "Contains Soy"
+        ]
+    },
+    "FG-thrive-market-orgain-grass-fed-whey-protein-powder-vanilla-bean": {
+        "name": "FG-thrive-market-orgain-grass-fed-whey-protein-powder-vanilla-bean",
+        "required_certifications": [
+            "Gluten-Free",
+            "Vegetarian",
+            "Certified B Corporation",
+            "Certified Kosher",
+            "Pasture-Raised",
+            "Grass-Fed",
+            "Tree Nut-Free",
+            "Wheat-Free",
+            "No Added Sugar",
+            "No Artificial Flavors",
+            "No Synthetic Colors",
+            "No Synthetic Preservatives",
+            "Soy-Free",
+            "Non-GMO"
+        ]
+    },
+    "FG-walmart-8053802024": {
+        "name": "FG-walmart-8053802024",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-walmart-17338669408": {
+        "name": "FG-walmart-17338669408",
+        "required_certifications": [
+            "Sugar-Free",
+            "Organic",
+            "Low-Carb",
+            "Vegetarian"
+        ]
+    },
+    "FG-walmart-10325038": {
+        "name": "FG-walmart-10325038",
+        "required_certifications": [
+            "-"
+        ]
+    },
+    "FG-walmart-17018124": {
+        "name": "FG-walmart-17018124",
+        "required_certifications": [
+            "-"
+        ]
+    },
+    "FG-walmart-17324942": {
+        "name": "FG-walmart-17324942",
+        "required_certifications": [
+            "Contains Fish Ingredients"
+        ]
+    },
+    "FG-walmart-867413342": {
+        "name": "FG-walmart-867413342",
+        "required_certifications": [
+            "Vegetarian",
+            "Gluten-Free",
+            "Soy-Free",
+            "Aspartame-Free"
+        ]
+    },
+    "FG-walmart-270357039": {
+        "name": "FG-walmart-270357039",
+        "required_certifications": [
+            "Non-GMO",
+            "Gluten-Free",
+            "Soy-Free",
+            "Dairy-Free"
+        ]
+    },
+    "FG-walmart-40775783": {
+        "name": "FG-walmart-40775783",
+        "required_certifications": [
+            "Iron-Free",
+            "Gluten-Free",
+            "Lactose-Free",
+            "No Artificial Flavors"
+        ]
+    },
+    "FG-walmart-19758123": {
+        "name": "FG-walmart-19758123",
+        "required_certifications": [
+            "Non-GMO",
+            "Gluten-Free",
+            "Dairy-Free"
+        ]
+    },
+    "FG-walmart-398189644": {
+        "name": "FG-walmart-398189644",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-walmart-945235241": {
+        "name": "FG-walmart-945235241",
+        "required_certifications": [
+            "Soy-Free",
+            "Gluten-Free",
+            "Contains Milk"
+        ]
+    },
+    "FG-walmart-502509842": {
+        "name": "FG-walmart-502509842",
+        "required_certifications": [
+            "Gluten-Free",
+            "Keto-Friendly",
+            "No Artificial Sweeteners",
+            "Organic",
+            "Sugar-Free",
+            "Vegan"
+        ]
+    },
+    "FG-walmart-10324636": {
+        "name": "FG-walmart-10324636",
+        "required_certifications": [
+            "Iron-Free",
+            "Gluten-Free",
+            "Lactose-Free",
+            "No Artificial Colors",
+            "No Artificial Flavors"
+        ]
+    },
+    "FG-walmart-109808244": {
+        "name": "FG-walmart-109808244",
+        "required_certifications": [
+            "-"
+        ]
+    },
+    "FG-walmart-143538101": {
+        "name": "FG-walmart-143538101",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-walmart-970963212": {
+        "name": "FG-walmart-970963212",
+        "required_certifications": [
+            "Non-GMO",
+            "Gluten-Free"
+        ]
+    },
+    "FG-walmart-36280067": {
+        "name": "FG-walmart-36280067",
+        "required_certifications": [
+            "No Color Added",
+            "No Artificial Flavors",
+            "USP Verified"
+        ]
+    },
+    "FG-walmart-3170683942": {
+        "name": "FG-walmart-3170683942",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-amazon-b0002wrqy4": {
+        "name": "FG-amazon-b0002wrqy4",
+        "required_certifications": [
+            "Dairy-Free",
+            "Gluten-Free",
+            "Lactose-Free",
+            "Non-GMO",
+            "USDA Organic",
+            "Vegan"
+        ]
+    },
+    "FG-amazon-b012t9ga6c": {
+        "name": "FG-amazon-b012t9ga6c",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-amazon-b0fts2jxgw": {
+        "name": "FG-amazon-b0fts2jxgw",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-amazon-b0d4625jds": {
+        "name": "FG-amazon-b0d4625jds",
+        "required_certifications": [
+            "Vegan",
+            "Non-GMO"
+        ]
+    },
+    "FG-amazon-b09hjv7xjs": {
+        "name": "FG-amazon-b09hjv7xjs",
+        "required_certifications": [
+            "Gluten-Free",
+            "Allergen-Free"
+        ]
+    },
+    "FG-amazon-b0gh94rpd9": {
+        "name": "FG-amazon-b0gh94rpd9",
+        "required_certifications": [
+            "Hormone-Free",
+            "Non-GMO",
+            "No Artificial Sweeteners",
+            "MSG-Free",
+            "Aspartame-Free",
+            "Gluten-Free",
+            "Caffeine-Free"
+        ]
+    },
+    "FG-amazon-b07z2x2xtc": {
+        "name": "FG-amazon-b07z2x2xtc",
+        "required_certifications": [
+            "Sugar-Free",
+            "Salt-Free",
+            "Carb-Free",
+            "No Flavors",
+            "Zero Calories",
+            "100% Natural",
+            "Vegan",
+            "Non-GMO",
+            "Gluten-Free",
+            "ClimatePartner Certified"
+        ]
+    },
+    "FG-amazon-b07mg7bxrt": {
+        "name": "FG-amazon-b07mg7bxrt",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-amazon-b0ghwg73j4": {
+        "name": "FG-amazon-b0ghwg73j4",
+        "required_certifications": [
+            "Sugar Free",
+            "Non-GMO",
+            "Vegan",
+            "No Artificial Dye Coloring",
+            "Allergen Free",
+            "No Artificial Preservatives"
+        ]
+    },
+    "FG-amazon-b007vwbm2u": {
+        "name": "FG-amazon-b007vwbm2u",
+        "required_certifications": [
+            "Vegetarian",
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free",
+            "Non-GMO",
+            "Kosher"
+        ]
+    },
+    "FG-amazon-b0ft5z9k9n": {
+        "name": "FG-amazon-b0ft5z9k9n",
+        "required_certifications": [
+            "Sugar-Free",
+            "Gluten-Free",
+            "Caffeine-Free",
+            "No Artificial Colors or Flavors"
+        ]
+    },
+    "FG-amazon-b07dlflsyp": {
+        "name": "FG-amazon-b07dlflsyp",
+        "required_certifications": [
+            "Gluten Free",
+            "Organic "
+        ]
+    },
+    "FG-amazon-b0dmzfympv": {
+        "name": "FG-amazon-b0dmzfympv",
+        "required_certifications": [
+            "Certified Organic",
+            "Keto",
+            "No Artificial Colors",
+            "No Artificial Flavors",
+            "No Artificial Preservatives",
+            "No Artificial Sweeteners",
+            "No Maltodextrin",
+            "Non-GMO",
+            "Paleo",
+            "Plant Based",
+            "Sugar-Free",
+            "Vegan",
+            "Zero Calorie"
+        ]
+    },
+    "FG-amazon-b016mrfr8y": {
+        "name": "FG-amazon-b016mrfr8y",
+        "required_certifications": [
+            "-"
+        ]
+    },
+    "FG-amazon-b0cn51242z": {
+        "name": "FG-amazon-b0cn51242z",
+        "required_certifications": [
+            "No Artificial Flavors",
+            "Sugar-Free",
+            "Contains Peanuts",
+            "GMP-Certified"
+        ]
+    },
+    "FG-vitacost-vitacost-magnesium": {
+        "name": "FG-vitacost-vitacost-magnesium",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free",
+            "Titanium Dioxide-Free"
+        ]
+    },
+    "FG-vitacost-vitacost-vitamin-d3-as-cholecalciferol": {
+        "name": "FG-vitacost-vitacost-vitamin-d3-as-cholecalciferol",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free"
+        ]
+    },
+    "FG-vitacost-vitacost-vitamin-d3-as-cholecalciferol-25-mcg-1000-iu-300-capsules": {
+        "name": "FG-vitacost-vitacost-vitamin-d3-as-cholecalciferol-25-mcg-1000-iu-300-capsules",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free"
+        ]
+    },
+    "FG-vitacost-nutricost-whey-protein-concentrate-powder-chocolate": {
+        "name": "FG-vitacost-nutricost-whey-protein-concentrate-powder-chocolate",
+        "required_certifications": [
+            "Gluten-Free",
+            "Non-GMO"
+        ]
+    },
+    "FG-vitacost-vitacost-vitamin-d3-mini-gels": {
+        "name": "FG-vitacost-vitacost-vitamin-d3-mini-gels",
+        "required_certifications": [
+            "Gluten-Free",
+            "Soy-Free",
+            "Fish-Free",
+            "Egg-Free",
+            "Dairy-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free"
+        ]
+    },
+    "FG-vitacost-vitacost-magnesium-400-mg-200-capsules": {
+        "name": "FG-vitacost-vitacost-magnesium-400-mg-200-capsules",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free",
+            "Titanium Dioxide-Free"
+        ]
+    },
+    "FG-vitacost-vitacost-electrolyte-mineral-drops-low-sodium": {
+        "name": "FG-vitacost-vitacost-electrolyte-mineral-drops-low-sodium",
+        "required_certifications": [
+            "Low-Sodium",
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free"
+        ]
+    },
+    "FG-vitacost-vitacost-synergy-once-daily-multivitamin": {
+        "name": "FG-vitacost-vitacost-synergy-once-daily-multivitamin",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Crustacean Shellfish-Free",
+            "Fish-Free",
+            "Gluten-Free"
+        ]
+    },
+    "FG-vitacost-vitacost-synergy-vitamin-d3-with-cultured-nutrients-fruits-vegetables": {
+        "name": "FG-vitacost-vitacost-synergy-vitamin-d3-with-cultured-nutrients-fruits-vegetables",
+        "required_certifications": [
+            "Non-GMO",
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Contains Soy"
+        ]
+    },
+    "FG-vitacost-vitacost-magnesium-ultra": {
+        "name": "FG-vitacost-vitacost-magnesium-ultra",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Peanut-Free",
+            "Tree Nut-Free",
+            "Shellfish-Free",
+            "Fish-Free",
+            "Soy-Free",
+            "Gluten-Free"
+        ]
+    },
+    "FG-vitacost-cure-hydration-hydrating-electrolyte-drink-mix-ginger-turmeric": {
+        "name": "FG-vitacost-cure-hydration-hydrating-electrolyte-drink-mix-ginger-turmeric",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Fish-Free",
+            "Gluten-Free",
+            "Kosher",
+            "No Added Sugar",
+            "No Artificial Colors",
+            "No Artificial Flavors",
+            "No Artificial Sweeteners",
+            "No Preservatives",
+            "No Sugar Alcohols",
+            "Non-GMO",
+            "Paleo Friendly",
+            "Peanut-Free",
+            "Plant-Based",
+            "Sesame-Free",
+            "Shellfish-Free",
+            "Soy-Free",
+            "Vegan",
+            "Wheat-Free"
+        ]
+    },
+    "FG-vitacost-seeking-health-optimal-electrolyte-powder-unflavored": {
+        "name": "FG-vitacost-seeking-health-optimal-electrolyte-powder-unflavored",
+        "required_certifications": [
+            "Dairy-Free",
+            "Egg-Free",
+            "Fish-Free",
+            "Shellfish-Free",
+            "Tree Nut-Free",
+            "Peanut-Free",
+            "Wheat-Free",
+            "Soy-Free",
+            "Sesame-Free",
+            "Gluten-Free",
+            "Non-GMO",
+            "Stevia-Free",
+            "Sugar-Free",
+            "Citric Acid-Free"
+        ]
+    },
+    "FG-gnc-145223": {
+        "name": "FG-gnc-145223",
+        "required_certifications": []
+    },
+    "FG-gnc-136813": {
+        "name": "FG-gnc-136813",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-2750": {
+        "name": "FG-the-vitamin-shoppe-vs-2750",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-2824": {
+        "name": "FG-the-vitamin-shoppe-vs-2824",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-ye-7038": {
+        "name": "FG-the-vitamin-shoppe-ye-7038",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-0168": {
+        "name": "FG-the-vitamin-shoppe-vs-0168",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-4311": {
+        "name": "FG-the-vitamin-shoppe-vs-4311",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-3115": {
+        "name": "FG-the-vitamin-shoppe-vs-3115",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-3450": {
+        "name": "FG-the-vitamin-shoppe-vs-3450",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-3026": {
+        "name": "FG-the-vitamin-shoppe-vs-3026",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-op-1011": {
+        "name": "FG-the-vitamin-shoppe-op-1011",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-2573": {
+        "name": "FG-the-vitamin-shoppe-vs-2573",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-0435": {
+        "name": "FG-the-vitamin-shoppe-vs-0435",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-2453": {
+        "name": "FG-the-vitamin-shoppe-vs-2453",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-vs-1977": {
+        "name": "FG-the-vitamin-shoppe-vs-1977",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-op-1009": {
+        "name": "FG-the-vitamin-shoppe-op-1009",
+        "required_certifications": []
+    },
+    "FG-the-vitamin-shoppe-anp-14924": {
+        "name": "FG-the-vitamin-shoppe-anp-14924",
+        "required_certifications": []
+    },
+    "FG-target-a-1006517338": {
+        "name": "FG-target-a-1006517338",
+        "required_certifications": [
+            "-"
+        ]
+    },
+    "FG-target-a-13943499": {
+        "name": "FG-target-a-13943499",
+        "required_certifications": [
+            "Non-GMO",
+            "Gluten-Free"
+        ]
+    },
+    "FG-target-a-81806945": {
+        "name": "FG-target-a-81806945",
+        "required_certifications": [
+            "Vegan",
+            "Gluten-Free",
+            "Non-GMO"
+        ]
+    },
+    "FG-target-a-94285133": {
+        "name": "FG-target-a-94285133",
+        "required_certifications": [
+            "Zero-Sugar",
+            "Non-Caffeinated",
+            "Gluten Free",
+            "Vegan"
+        ]
+    },
+    "FG-target-a-14161820": {
+        "name": "FG-target-a-14161820",
+        "required_certifications": [
+            "Gluten-Free",
+            "No Color Added",
+            "No Artificial Flavors",
+            "USP Verified"
+        ]
+    },
+    "FG-target-a-91641244": {
+        "name": "FG-target-a-91641244",
+        "required_certifications": [
+            "Gluten-Free",
+            "No Synthetic Dyes",
+            "No Artificial Flavors"
+        ]
+    },
+    "FG-target-a-91641237": {
+        "name": "FG-target-a-91641237",
+        "required_certifications": [
+            "Gluten-Free",
+            "No Color Added",
+            "No Artificial Flavors",
+            "USP Verified"
+        ]
+    },
+    "FG-target-a-81858337": {
+        "name": "FG-target-a-81858337",
+        "required_certifications": [
+            "Gluten-Free",
+            "No color added",
+            "No artificial flavors"
+        ]
+    },
+    "FG-target-a-1003257378": {
+        "name": "FG-target-a-1003257378",
+        "required_certifications": [
+            "Sugar-Free",
+            "Keto",
+            "Vegan",
+            "Non-GMO"
+        ]
+    },
+    "FG-target-a-10996455": {
+        "name": "FG-target-a-10996455",
+        "required_certifications": [
+            "Gluten-Free",
+            "Wheat-Free",
+            "Dairy-Free",
+            "No Artificial Colors",
+            "No Artificial Sweeteners"
+        ]
+    },
+    "FG-target-a-78807252": {
+        "name": "FG-target-a-78807252",
+        "required_certifications": [
+            "Whey Protein",
+            "Low Sugar",
+            "Low Carb",
+            "Low Fat",
+            "Whey Protein Isolate",
+            "Hydrolyzed Whey Protein"
+        ]
+    },
+    "FG-target-a-78807251": {
+        "name": "FG-target-a-78807251",
+        "required_certifications": [
+            "Low Sugar",
+            "Low Carb",
+            "Low Fat"
+        ]
+    },
+    "FG-target-a-83786452": {
+        "name": "FG-target-a-83786452",
+        "required_certifications": [
+            "Low Sugar",
+            "Low Carb",
+            "Low Fat"
+        ]
+    },
+    "FG-target-a-50284728": {
+        "name": "FG-target-a-50284728",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-target-a-90043361": {
+        "name": "FG-target-a-90043361",
+        "required_certifications": [
+            "Gluten-Free",
+            "Non-GMO",
+            "Vegan"
+        ]
+    },
+    "FG-target-a-94645860": {
+        "name": "FG-target-a-94645860",
+        "required_certifications": [
+            "NSF Certified",
+            "Soy-Free",
+            "Sodium Free",
+            "Gluten-Free"
+        ]
+    },
+    "FG-target-a-14364963": {
+        "name": "FG-target-a-14364963",
+        "required_certifications": [
+            "Gluten-Free",
+            "Lactose-Free"
+        ]
+    },
+    "FG-target-a-14510453": {
+        "name": "FG-target-a-14510453",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-target-a-90043370": {
+        "name": "FG-target-a-90043370",
+        "required_certifications": [
+            "Gluten-Free"
+        ]
+    },
+    "FG-target-a-90430364": {
+        "name": "FG-target-a-90430364",
+        "required_certifications": [
+            "Gluten Free"
+        ]
+    },
+    "FG-costco-11467951": {
+        "name": "FG-costco-11467951",
+        "required_certifications": [
+            "USP Verified",
+            "Gluten-Free"
+        ]
+    },
+    "FG-costco-100494097": {
+        "name": "FG-costco-100494097",
+        "required_certifications": [
+            "No Preservatives",
+            "No Synthetic Dyes",
+            "No Artificial Flavors",
+            "Gluten-Free"
+        ]
+    },
+    "FG-costco-100214136": {
+        "name": "FG-costco-100214136",
+        "required_certifications": [
+            "Gluten-Free",
+            "No Artificial Colors",
+            "No Artificial Flavors",
+            "USP Verified"
+        ]
+    },
+    "FG-costco-100851161": {
+        "name": "FG-costco-100851161",
+        "required_certifications": [
+            "Soy-Free",
+            "Gluten-Free",
+            "Lactose-Free",
+            "Non-GMO",
+            "Vegetarian",
+            "Dairy-Free",
+            "Sugar-Free"
+        ]
+    },
+    "FG-costco-11491625": {
+        "name": "FG-costco-11491625",
+        "required_certifications": [
+            "Gluten-Free",
+            "Lactose-Free",
+            "USP Verified"
+        ]
+    },
+    "FG-costco-100351325": {
+        "name": "FG-costco-100351325",
+        "required_certifications": [
+            "Dairy-Free",
+            "Fish-Free",
+            "Gluten-Free",
+            "Lactose-Free",
+            "Non-GMO",
+            "Sodium-Free",
+            "Sugar-Free",
+            "USP Verified",
+            "Wheat-Free",
+            "Yeast-Free"
+        ]
+    },
+    "FG-costco-100143268": {
+        "name": "FG-costco-100143268",
+        "required_certifications": [
+            "Gluten-Free",
+            "Dairy-Free"
+        ]
+    },
+    "FG-costco-4000025085": {
+        "name": "FG-costco-4000025085",
+        "required_certifications": [
+            "Vegan",
+            "Non-GMO",
+            "Gluten-Free",
+            "Soy-Free",
+            "Plant-Based",
+            "Contains Tree Nuts (coconut)"
+        ]
+    },
+    "FG-costco-11672433": {
+        "name": "FG-costco-11672433",
+        "required_certifications": [
+            "Gluten-Free",
+            "Lactose-Free",
+            "No Artificial Colors",
+            "No Artificial Flavors",
+            "No Preservatives",
+            "No Yeast",
+            "USP Verified"
+        ]
+    },
+    "FG-sams-club-prod15990273": {
+        "name": "FG-sams-club-prod15990273",
+        "required_certifications": [
+            "Gluten-Free",
+            "Dairy-Free"
+        ]
+    },
+    "FG-sams-club-prod19150276": {
+        "name": "FG-sams-club-prod19150276",
+        "required_certifications": []
+    },
+    "FG-sams-club-p03010993": {
+        "name": "FG-sams-club-p03010993",
+        "required_certifications": []
+    },
+    "FG-sams-club-p03016382": {
+        "name": "FG-sams-club-p03016382",
+        "required_certifications": []
+    },
+    {
+        "FG-walgreens-300436641": {
+            "name": "FG-walgreens-300436641",
+            "required_certifications": [
+                "Gluten-Free"
+            ]
+        },
+        "FG-walgreens-300436539": {
+            "name": "FG-walgreens-300436539",
+            "required_certifications": [
+                "Gluten-Free"
+            ]
+        },
+        "FG-walgreens-300447518": {
+            "name": "FG-walgreens-300447518",
+            "required_certifications": [
+                "Gluten-Free",
+                "Vegan",
+                "Non-GMO"
+            ]
+        },
+        "FG-walgreens-300411121": {
+            "name": "FG-walgreens-300411121",
+            "required_certifications": [
+                "Gluten-Free",
+                "Non-GMO",
+                "Soy-Free",
+                "Dairy-Free"
+            ]
+        },
+        "FG-walgreens-prod6063885": {
+            "name": "FG-walgreens-prod6063885",
+            "required_certifications": [
+                "Gluten-Free",
+                "No Color Added",
+                "No Artificial Flavors",
+                "USP Verified"
+            ]
+        },
+        "FG-walgreens-prod2303851": {
+            "name": "FG-walgreens-prod2303851",
+            "required_certifications": [
+                "No Color Added",
+                "No Artificial Flavors"
+            ]
+        },
+        "FG-walgreens-prod6063886": {
+            "name": "FG-walgreens-prod6063886",
+            "required_certifications": [
+                "Gluten-Free",
+                "No Color Added",
+                "No Artificial Flavors",
+                "USP Verified"
+            ]
+        },
+        "FG-walgreens-300425544": {
+            "name": "FG-walgreens-300425544",
+            "required_certifications": [
+                "Gluten-Free",
+                "No Synthetic Dyes",
+                "No Artificial Flavors"
+            ]
+        },
+        "FG-walgreens-300413432": {
+            "name": "FG-walgreens-300413432",
+            "required_certifications": [
+                "Gluten-Free",
+                "No Added Color",
+                "No Artificial Flavors"
+            ]
+        },
+        "FG-walgreens-prod6031044": {
+            "name": "FG-walgreens-prod6031044",
+            "required_certifications": [
+                "Gluten-Free",
+                "No Color Added",
+                "No Artificial Flavors",
+                "USP Verified"
+            ]
+        },
+        "FG-walgreens-prod6083374": {
+            "name": "FG-walgreens-prod6083374",
+            "required_certifications": [
+                "-"
+            ]
+        },
+        "FG-walgreens-prod6028865": {
+            "name": "FG-walgreens-prod6028865",
+            "required_certifications": [
+                "-"
+            ]
+        },
+        "FG-walgreens-300413257": {
+            "name": "FG-walgreens-300413257",
+            "required_certifications": [
+                "No Egg Allergen",
+                "No Dairy (Milk) Allergen",
+                "No Soy Allergen",
+                "No Fish Allergen",
+                "No Crustacean Shellfish Allergen",
+                "No Peanut Allergen",
+                "No Tree Nut Allergen",
+                "No Sesame Allergen"
+            ]
+        },
+        "FG-walgreens-prod6253529": {
+            "name": "FG-walgreens-prod6253529",
+            "required_certifications": [
+                "No Artificial Colors Or Flavors",
+                "No Gluten",
+                "No Lactose"
+            ]
+        },
+        "FG-cvs-704167": {
+            "name": "FG-cvs-704167",
+            "required_certifications": []
+        },
+        "FG-cvs-342300": {
+            "name": "FG-cvs-342300",
+            "required_certifications": []
+        },
+        "FG-cvs-246284": {
+            "name": "FG-cvs-246284",
+            "required_certifications": []
+        },
+        "FG-cvs-486916": {
+            "name": "FG-cvs-486916",
+            "required_certifications": []
+        },
+        "FG-cvs-448437": {
+            "name": "FG-cvs-448437",
+            "required_certifications": []
+        },
+        "FG-cvs-424495": {
+            "name": "FG-cvs-424495",
+            "required_certifications": []
+        },
+        "FG-cvs-880579": {
+            "name": "FG-cvs-880579",
+            "required_certifications": []
+        },
+        "FG-cvs-843231": {
+            "name": "FG-cvs-843231",
+            "required_certifications": []
+        },
+        "FG-cvs-410537": {
+            "name": "FG-cvs-410537",
+            "required_certifications": []
+        },
+        "FG-cvs-504105": {
+            "name": "FG-cvs-504105",
+            "required_certifications": []
+        },
+        "FG-sams-club-p03012212": {
+            "name": "FG-sams-club-p03012212",
+            "required_certifications": [
+                "Vegetarian",
+                "No artificial flavors",
+                "No sweeteners",
+                "100% drug-free"
+            ]
+        }
+    }

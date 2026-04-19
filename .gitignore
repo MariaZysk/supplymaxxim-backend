@@ -17,9 +17,13 @@ env/
 # Binaries
 *.exe
 
-# Data / generated files
+# Data / generated files (exclude root-level generated outputs)
 *.csv
 *.json
 *.pdf
 *.docx
 *.xlsx
+
+# Allow versioned data assets in data/
+!data/
+!data/**
