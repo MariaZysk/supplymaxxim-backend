@@ -1,0 +1,128 @@
+[
+  {
+    "Category": "Identity",
+    "Field Name": "Ingredient Name",
+    "Description": "Normalized chemical/ingredient name",
+    "Required (Must/Good)": "Must",
+    "Example": "Magnesium Stearate"
+  },
+  {
+    "Category": "Identity",
+    "Field Name": "Synonyms",
+    "Description": "Alternative names",
+    "Required (Must/Good)": "Must",
+    "Example": "Magnesium octadecanoate"
+  },
+  {
+    "Category": "Function",
+    "Field Name": "Functional Role",
+    "Description": "Role in product",
+    "Required (Must/Good)": "Must",
+    "Example": "Lubricant"
+  },
+  {
+    "Category": "Quality",
+    "Field Name": "Grade",
+    "Description": "Application grade",
+    "Required (Must/Good)": "Must",
+    "Example": "Pharma Grade"
+  },
+  {
+    "Category": "Quality",
+    "Field Name": "Purity (%)",
+    "Description": "Purity or concentration",
+    "Required (Must/Good)": "Must",
+    "Example": "98%"
+  },
+  {
+    "Category": "Compliance",
+    "Field Name": "Regulatory Status",
+    "Description": "Approved for use (FDA/EU etc.)",
+    "Required (Must/Good)": "Must",
+    "Example": "FDA Approved"
+  },
+  {
+    "Category": "Supplier",
+    "Field Name": "Supplier Name",
+    "Description": "Supplier providing the material",
+    "Required (Must/Good)": "Must",
+    "Example": "Ashland"
+  },
+  {
+    "Category": "Identity",
+    "Field Name": "Chemical Formula",
+    "Description": "Chemical composition",
+    "Required (Must/Good)": "Good",
+    "Example": "Mg(C18H35O2)2"
+  },
+  {
+    "Category": "Properties",
+    "Field Name": "Physical Form",
+    "Description": "Powder/liquid/granule",
+    "Required (Must/Good)": "Good",
+    "Example": "Powder"
+  },
+  {
+    "Category": "Properties",
+    "Field Name": "Solubility",
+    "Description": "Solubility properties",
+    "Required (Must/Good)": "Good",
+    "Example": "Insoluble in water"
+  },
+  {
+    "Category": "Properties",
+    "Field Name": "Particle Size",
+    "Description": "Granularity",
+    "Required (Must/Good)": "Good",
+    "Example": "Micronized"
+  },
+  {
+    "Category": "Certifications",
+    "Field Name": "Certifications",
+    "Description": "GMP, ISO, Organic etc.",
+    "Required (Must/Good)": "Good",
+    "Example": "GMP Certified"
+  },
+  {
+    "Category": "Origin",
+    "Field Name": "Source",
+    "Description": "Natural or synthetic",
+    "Required (Must/Good)": "Good",
+    "Example": "Synthetic"
+  },
+  {
+    "Category": "Origin",
+    "Field Name": "Country of Origin",
+    "Description": "Production origin",
+    "Required (Must/Good)": "Good",
+    "Example": "USA"
+  },
+  {
+    "Category": "Safety",
+    "Field Name": "Allergen Info",
+    "Description": "Allergens or risks",
+    "Required (Must/Good)": "Good",
+    "Example": "None"
+  },
+  {
+    "Category": "Usage",
+    "Field Name": "Use Case",
+    "Description": "Typical application",
+    "Required (Must/Good)": "Good",
+    "Example": "Tablet formulation"
+  },
+  {
+    "Category": "Supply",
+    "Field Name": "Lead Time",
+    "Description": "Delivery time estimate",
+    "Required (Must/Good)": "Good",
+    "Example": "2 weeks"
+  },
+  {
+    "Category": "Supply",
+    "Field Name": "Availability",
+    "Description": "Supply stability",
+    "Required (Must/Good)": "Good",
+    "Example": "High"
+  }
+]

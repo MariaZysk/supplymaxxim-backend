@@ -1,0 +1,19 @@
+{
+  "name": "spheremaxxing-ai-console",
+  "private": true,
+  "workspaces": ["frontend"],
+  "devDependencies": {
+    "concurrently": "^9.1.2"
+  },
+  "scripts": {
+    "dev": "npm run dev -w frontend",
+    "dev:api": "cd backend && python -m uvicorn app.main:app --reload --host 127.0.0.1 --port 8000",
+    "dev:all": "concurrently -k -n web,api -c cyan,magenta \"npm run dev\" \"npm run dev:api\"",
+    "build": "npm run build -w frontend",
+    "build:dev": "npm run build:dev -w frontend",
+    "lint": "npm run lint -w frontend",
+    "preview": "npm run preview -w frontend",
+    "test": "npm run test -w frontend",
+    "test:watch": "npm run test:watch -w frontend"
+  }
+}
