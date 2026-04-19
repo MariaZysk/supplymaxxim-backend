@@ -1,0 +1,25 @@
+# Environment
+.env
+
+# Database
+*.sqlite
+*.db
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.venv/
+venv/
+env/
+
+# Binaries
+*.exe
+
+# Data / generated files
+*.csv
+*.json
+*.pdf
+*.docx
+*.xlsx
