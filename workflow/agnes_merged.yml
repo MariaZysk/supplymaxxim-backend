@@ -1,0 +1,980 @@
+app:
+  description: Agnes is an AI Supply Chain Manager that helps CPG sourcing teams identify
+    substitute ingredients, verify compliance, and consolidate supplier relationships
+    using enriched BOM, regulatory, and live supply chain intelligence.
+  icon: 🔍
+  icon_background: '#E0F2FE'
+  icon_type: emoji
+  mode: advanced-chat
+  name: AgnesMaxxim Extended - MERGED
+  use_icon_as_answer_icon: false
+dependencies:
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/anthropic:0.3.10@4c9f48873be942854bc7c73965ce6f9266fa4985ac426fb88e5001dfa744649c
+    version: null
+- current_identifier: null
+  type: marketplace
+  value:
+    marketplace_plugin_unique_identifier: langgenius/gemini:0.7.20@de0063a630a6d1b2c025fb84f3462ba5151fb60618309cd595c3f4711b1df847
+    version: null
+kind: app
+version: 0.6.0
+workflow:
+  conversation_variables: []
+  environment_variables:
+  - description: ''
+    id: env_bom_api_url
+    name: BOM_API_URL
+    selector:
+    - env
+    - BOM_API_URL
+    value: https://daybreak-decay-atonable.ngrok-free.dev
+    value_type: string
+  - description: ''
+    id: env_bom_api_token
+    name: BOM_API_TOKEN
+    selector:
+    - env
+    - BOM_API_TOKEN
+    value: ''
+    value_type: secret
+  - description: ''
+    id: env_firecrawl_api_key
+    name: FIRECRAWL_API_KEY
+    selector:
+    - env
+    - FIRECRAWL_API_KEY
+    value: ''
+    value_type: secret
+  features:
+    file_upload:
+      allowed_file_extensions:
+      - .pdf
+      - .txt
+      - .docx
+      allowed_file_types:
+      - document
+      allowed_file_upload_methods:
+      - local_file
+      - remote_url
+      enabled: true
+      fileUploadConfig:
+        attachment_image_file_size_limit: 2
+        audio_file_size_limit: 50
+        batch_count_limit: 5
+        file_size_limit: 15
+        file_upload_limit: 50
+        image_file_batch_limit: 10
+        image_file_size_limit: 10
+        single_chunk_attachment_limit: 10
+        video_file_size_limit: 100
+        workflow_file_upload_limit: 10
+      image:
+        enabled: false
+        number_limits: 3
+        transfer_methods:
+        - local_file
+        - remote_url
+      number_limits: 5
+    opening_statement: 'Hello! I''m Agnes, your AI Supply Chain Manager.
+
+      I can help you: - Find substitute ingredients with compliance verification -
+      Analyse supplier risk and single-source dependencies - Assess BOM impact of
+      any sourcing change - Monitor live regulatory and supply disruption intelligence
+
+      You can also upload a supplier Certificate of Analysis or spec sheet and I will
+      extract compliance data and factor it into my recommendations.
+
+      What would you like to explore today? '
+    retriever_resource:
+      enabled: true
+    sensitive_word_avoidance:
+      enabled: false
+    speech_to_text:
+      enabled: false
+    suggested_questions:
+    - Which ingredients have single-source supplier risk in my portfolio?
+    - What verified substitutes exist for vitamin D3 cholecalciferol?
+    - Which suppliers can I consolidate across multiple products?
+    - What would happen if Prinova USA became unavailable?
+    - Are there any active supply disruptions for magnesium stearate?
+    - What is the regulatory status of microcrystalline cellulose in the EU?
+    suggested_questions_after_answer:
+      enabled: true
+    text_to_speech:
+      enabled: false
+      language: ''
+      voice: ''
+  graph:
+    edges:
+    - data:
+        isInIteration: false
+        sourceType: start
+        targetType: llm
+      id: edge_start_intent
+      selected: false
+      source: start
+      sourceHandle: source
+      target: test_intent_llm
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: code
+      id: edge_llm_extractor
+      selected: false
+      source: test_intent_llm
+      sourceHandle: source
+      target: test_intent_extractor
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: edge_extractor_context
+      selected: false
+      source: test_intent_extractor
+      sourceHandle: source
+      target: context_query
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: edge_extractor_pubchem
+      selected: false
+      source: test_intent_extractor
+      sourceHandle: source
+      target: pubchem_query
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: edge_extractor_regulatory
+      selected: false
+      source: test_intent_extractor
+      sourceHandle: source
+      target: regulatory_query
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: http-request
+      id: edge_extractor_news
+      selected: false
+      source: test_intent_extractor
+      sourceHandle: source
+      target: news_query
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: edge_extractor_docparser
+      selected: false
+      source: test_intent_extractor
+      sourceHandle: source
+      target: doc_parser
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: code
+      id: edge_news_formatter
+      selected: false
+      source: news_query
+      sourceHandle: source
+      target: news_formatter
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: edge_formatter_risk
+      selected: false
+      source: news_formatter
+      sourceHandle: source
+      target: risk_classifier
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: code
+        targetType: llm
+      id: edge_formatter_agnes
+      selected: false
+      source: news_formatter
+      sourceHandle: source
+      target: agnes_response
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: llm
+      id: edge_context_agnes
+      selected: false
+      source: context_query
+      sourceHandle: source
+      target: agnes_response
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: llm
+      id: edge_pubchem_agnes
+      selected: false
+      source: pubchem_query
+      sourceHandle: source
+      target: agnes_response
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: llm
+      id: edge_regulatory_agnes
+      selected: false
+      source: regulatory_query
+      sourceHandle: source
+      target: agnes_response
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: edge_docparser_agnes
+      selected: false
+      source: doc_parser
+      sourceHandle: source
+      target: agnes_response
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: edge_risk_agnes
+      selected: false
+      source: risk_classifier
+      sourceHandle: source
+      target: agnes_response
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: edge_agnes_sim
+      selected: false
+      source: agnes_response
+      sourceHandle: source
+      target: scenario_simulator
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: http-request
+        targetType: llm
+      id: edge_context_sim
+      selected: false
+      source: context_query
+      sourceHandle: source
+      target: scenario_simulator
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: llm
+      id: edge_risk_sim
+      selected: false
+      source: risk_classifier
+      sourceHandle: source
+      target: scenario_simulator
+      targetHandle: target
+      type: custom
+    - data:
+        isInIteration: false
+        sourceType: llm
+        targetType: answer
+      id: edge_sim_answer
+      selected: false
+      source: scenario_simulator
+      sourceHandle: source
+      target: answer
+      targetHandle: target
+      type: custom
+    nodes:
+    - data:
+        desc: Receives user query and optional supplier document uploaded via the
+          chat file attachment button
+        selected: false
+        title: Start
+        type: start
+        variables:
+        - allowed_file_extensions: []
+          allowed_file_types:
+          - image
+          - document
+          allowed_file_upload_methods:
+          - local_file
+          - remote_url
+          default: ''
+          hide: true
+          hint: ''
+          label: supplier_doc
+          options: []
+          placeholder: ''
+          required: false
+          type: file
+          variable: supplier_doc
+      height: 168
+      id: start
+      position:
+        x: 24
+        y: 379
+      positionAbsolute:
+        x: 24
+        y: 379
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: Classifies user intent and extracts the core ingredient/supplier name
+          as search_key. Outputs JSON with intent and search_key fields.
+        model:
+          completion_params:
+            temperature: 0
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: sys_intent
+          role: system
+          text: "Role: You are the Technical Query Optimizer for Agnes. Your goal\
+            \ is to intercept conversational user queries and translate them into\
+            \ precise technical search keys and SQL patterns.\n\nRules to Prevent\
+            \ Hallucination:\n- Never Invent Names: If no ingredient is provided,\
+            \ do not guess one.\n- Strict Extraction: If an RM- SKU is provided, extract\
+            \ ONLY the core ingredient name (e.g., from RM-C30-soybean-oil-e0b7881a,\
+            \ extract soybean oil).\n- Bilingual Translation: If the user uses German\
+            \ terms (e.g., \"Zitronensäure\"), translate them to English (\"citric\
+            \ acid\").\n\nClassification Categories:\n- ingredient_lookup, portfolio_question,\
+            \ document_upload, supplier_risk, ingredient_comparison, product_sku_lookup\n\
+            \nRequired Output Format (JSON ONLY, NO MARKDOWN):\n{\n  \"intent\": \"\
+            category_name\",\n  \"search_key\": \"Extracted chemical name\"\n}"
+        - id: user_intent
+          role: user
+          text: 'Query: {{#sys.query#}} '
+        selected: false
+        title: TEST Intent LLM
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 163
+      id: test_intent_llm
+      position:
+        x: 320
+        y: 400
+      positionAbsolute:
+        x: 320
+        y: 400
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\nimport re\n\ndef main(arg1: str) -> dict:\n    try:\n\
+          \        match = re.search(r'\\{.*?\\}', arg1, re.DOTALL)\n        if match:\n\
+          \            data = json.loads(match.group(0))\n            return {\n \
+          \               \"intent\": str(data.get(\"intent\", \"ingredient_lookup\"\
+          )),\n                \"search_key\": str(data.get(\"search_key\", arg1)).strip()\n\
+          \            }\n        return {\"intent\": \"ingredient_lookup\", \"search_key\"\
+          : arg1}\n    except Exception:\n        return {\"intent\": \"ingredient_lookup\"\
+          , \"search_key\": arg1}"
+        code_language: python3
+        desc: Safely extracts intent and search_key from LLM JSON output. Falls back
+          to ingredient_lookup if parsing fails.
+        outputs:
+          intent:
+            children: null
+            type: string
+          search_key:
+            children: null
+            type: string
+        selected: false
+        title: TEST Extractor Code
+        type: code
+        variables:
+        - value_selector:
+          - test_intent_llm
+          - text
+          variable: arg1
+      height: 111
+      id: test_intent_extractor
+      position:
+        x: 620
+        y: 400
+      positionAbsolute:
+        x: 620
+        y: 400
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config:
+            header: Authorization
+            token: '{{ENV.BOM_API_TOKEN}}'
+          type: no-auth
+        body:
+          data:
+          - type: text
+            value: "{\n  \"query\": \"{{#test_intent_extractor.search_key#}}\",\n\
+              \  \"intent\": \"{{#test_intent_extractor.intent#}}\"\n}"
+          type: json
+        desc: Unified DB call — returns bom_data, product_data, comparison_data, supplier_data,
+          portfolio_data with empty defaults. Never undefined.
+        headers: 'Content-Type:application/json
+
+          ngrok-skip-browser-warning:true'
+        method: POST
+        params: ''
+        retry_config:
+          max_retries: 3
+          retry_enabled: true
+          retry_interval: 100
+        selected: false
+        ssl_verify: true
+        timeout:
+          connect: 10
+          max_connect_retries: 2
+          max_read_retries: 2
+          read: 30
+        title: Context Query (DB)
+        type: http-request
+        url: '{{#env.BOM_API_URL#}}/api/context'
+        variables: []
+      height: 232
+      id: context_query
+      position:
+        x: 950
+        y: 80
+      positionAbsolute:
+        x: 950
+        y: 80
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: {}
+          type: no-auth
+        body:
+          data:
+          - type: text
+            value: "{\n  \"query\": \"{{#test_intent_extractor.search_key#}}\"\n}"
+          type: json
+        desc: Calls /api/pubchem — returns chemical formula, synonyms, solubility.
+          Zero LLM. Returns {} if ingredient not found.
+        headers: 'Content-Type:application/json
+
+          ngrok-skip-browser-warning:true'
+        method: POST
+        params: ''
+        retry_config:
+          max_retries: 2
+          retry_enabled: true
+          retry_interval: 200
+        selected: false
+        ssl_verify: true
+        timeout:
+          connect: 10
+          max_connect_retries: 1
+          max_read_retries: 1
+          read: 15
+        title: PubChem Identity Query
+        type: http-request
+        url: '{{#env.BOM_API_URL#}}/api/pubchem'
+        variables: []
+      height: 216
+      id: pubchem_query
+      position:
+        x: 950
+        y: 325
+      positionAbsolute:
+        x: 950
+        y: 325
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: {}
+          type: no-auth
+        body:
+          data:
+          - type: text
+            value: "{\n  \"query\": \"{{#test_intent_extractor.search_key#}}\"\n}"
+          type: json
+        desc: Calls /api/regulatory — returns FDA openFDA status, approved uses, compliance
+          flags. Zero LLM. Returns {} if not found.
+        headers: 'Content-Type:application/json
+
+          ngrok-skip-browser-warning:true'
+        method: POST
+        params: ''
+        retry_config:
+          max_retries: 2
+          retry_enabled: true
+          retry_interval: 200
+        selected: false
+        ssl_verify: true
+        timeout:
+          connect: 10
+          max_connect_retries: 1
+          max_read_retries: 1
+          read: 15
+        title: Regulatory Status Query
+        type: http-request
+        url: '{{#env.BOM_API_URL#}}/api/regulatory'
+        variables: []
+      height: 232
+      id: regulatory_query
+      position:
+        x: 950
+        y: 560
+      positionAbsolute:
+        x: 950
+        y: 560
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        authorization:
+          config: {}
+          type: no-auth
+        body:
+          data:
+          - type: text
+            value: "{\n  \"query\": \"{{#test_intent_extractor.search_key#}}\",\n\
+              \  \"intent\": \"{{#test_intent_extractor.intent#}}\"\n}"
+          type: json
+        desc: Calls /api/news — scrapes Google News via Firecrawl, extracts disruption
+          signals via regex (shortage, recall, ban, strike, tariff, export control).
+          Returns structured JSON. news_formatter node cleans this before LLM use.
+        headers: 'Content-Type:application/json
+
+          ngrok-skip-browser-warning:true'
+        method: POST
+        params: ''
+        retry_config:
+          max_retries: 2
+          retry_enabled: true
+          retry_interval: 500
+        selected: false
+        ssl_verify: true
+        timeout:
+          connect: 10
+          max_connect_retries: 1
+          max_read_retries: 1
+          read: 30
+        title: Supply Chain News Query
+        type: http-request
+        url: '{{#env.BOM_API_URL#}}/api/news'
+        variables: []
+      height: 248
+      id: news_query
+      position:
+        x: 950
+        y: 800
+      positionAbsolute:
+        x: 950
+        y: 800
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        code: "import json\n\ndef main(body: str) -> dict:\n    try:\n        d =\
+          \ json.loads(body)\n    except Exception:\n        return {\"signals_text\"\
+          : str(body), \"has_signals\": \"false\"}\n    signals = d.get(\"signals\"\
+          , [])\n    headlines = d.get(\"headlines\", [])\n    signal_count = int(d.get(\"\
+          signal_count\", 0))\n    note = str(d.get(\"note\", \"\"))\n    if not signals\
+          \ and not headlines:\n        text = \"No supply chain disruption signals\
+          \ found.\"\n        if note:\n            text += \" (\" + note + \")\"\n\
+          \        return {\"signals_text\": text, \"has_signals\": \"false\"}\n \
+          \   parts = []\n    if signals:\n        parts.append(\"DISRUPTION SIGNALS\
+          \ DETECTED:\")\n        for s in signals:\n            t = s.get(\"type\"\
+          , \"unknown\").upper()\n            m = \", \".join(s.get(\"matches\", []))\n\
+          \            parts.append(\"  [\" + t + \"] \" + m)\n    if headlines:\n\
+          \        parts.append(\"RELEVANT HEADLINES:\")\n        for h in headlines:\n\
+          \            parts.append(\"  - \" + str(h))\n    sep = chr(10)\n    return\
+          \ {\n        \"signals_text\": sep.join(parts),\n        \"has_signals\"\
+          : \"true\" if signal_count > 0 else \"false\"\n    }"
+        code_language: python3
+        desc: Converts raw /api/news JSON into clean human-readable text for risk_classifier
+          and Agnes. Strips slug/from_cache noise. Outputs signals_text and has_signals.
+        outputs:
+          has_signals:
+            children: null
+            type: string
+          signals_text:
+            children: null
+            type: string
+        selected: false
+        title: News Formatter
+        type: code
+        variables:
+        - value_selector:
+          - news_query
+          - body
+          variable: body
+      height: 143
+      id: news_formatter
+      position:
+        x: 1250
+        y: 800
+      positionAbsolute:
+        x: 1250
+        y: 800
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: Extracts compliance data from uploaded CoA or spec sheet via sys.files.
+          Returns empty JSON object if no document provided.
+        model:
+          completion_params:
+            temperature: 0.1
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: sys_doc
+          role: system
+          text: "You are a compliance document analyst. If a document is provided,\
+            \ extract the following fields and return structured JSON. If no document\
+            \ is provided, return an empty JSON object {}.\n\n{\n  \"ingredient_name\"\
+            : null,\n  \"purity_percent\": null,\n  \"grade\": null,\n  \"certifications\"\
+            : [],\n  \"allergen_declarations\": [],\n  \"regulatory_standards\": [],\n\
+            \  \"supplier_name\": null,\n  \"supplier_contact\": null,\n  \"document_date\"\
+            : null,\n  \"notes\": null\n}\n\nDo not infer or hallucinate values.\n"
+        - id: user_doc
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Document Parser
+        type: llm
+        variables: []
+        vision:
+          configs:
+            detail: high
+            variable_selector:
+            - sys
+            - files
+          enabled: true
+      height: 163
+      id: doc_parser
+      position:
+        x: 950
+        y: 1060
+      positionAbsolute:
+        x: 950
+        y: 1060
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: 'RESTRICTED LLM — classifies pre-formatted disruption signals from news_formatter
+          as risk level. Input: clean signal text only. Output: RISK_LEVEL + one sentence.
+          Does not generate facts.'
+        model:
+          completion_params:
+            temperature: 0
+          mode: chat
+          name: gemini-2.5-flash
+          provider: langgenius/gemini/google
+        prompt_template:
+        - id: sys_risk
+          role: system
+          text: 'You are a supply chain risk classifier. You will receive disruption
+            signals extracted from news by a regex parser and formatted as readable
+            text — not raw JSON.
+
+
+            Your ONLY job: classify the overall risk level.
+
+
+            Output format (exactly two lines, nothing else):
+
+            RISK_LEVEL: HIGH | MEDIUM | LOW | NONE
+
+            REASON: [one sentence referencing only the signals provided, no new facts]
+
+
+            Risk criteria:
+
+            - HIGH:   active shortage, recall, export ban, or sanctions found
+
+            - MEDIUM: disruption warnings, price spikes, or political tension found
+
+            - LOW:    minor delays or isolated incidents found
+
+            - NONE:   no disruption signals found
+
+
+            Never mention supplier or ingredient names not present in the input.
+
+            Never invent data not in the signals.
+
+            '
+        - id: user_risk
+          role: user
+          text: 'Disruption signals extracted from news:
+
+            {{#news_formatter.signals_text#}}'
+        selected: false
+        title: Risk Classifier
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 179
+      id: risk_classifier
+      position:
+        x: 1550
+        y: 800
+      positionAbsolute:
+        x: 1550
+        y: 800
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: Generates Agnes sourcing recommendation with full evidence trail, citations,
+          replaceability scoring, and live supply chain intelligence
+        model:
+          completion_params:
+            max_tokens: 800
+            temperature: 0.2
+          mode: chat
+          name: claude-opus-4-20250514
+          provider: langgenius/anthropic/anthropic
+        prompt_template:
+        - id: sys_agnes
+          role: system
+          text: "You are Agnes, an AI Supply Chain Manager. Your responses must be\
+            \ BRUTALLY CONCISE. Absolute maximum of 100 words total (unless a comparison\
+            \ table is required). Do not write essays. No introductory filler.\n\n\
+            DATA SOURCES (priority order):\n1. [DB]       db.sqlite — BOM, suppliers,\
+            \ enrichment (grade, purity, certifications, regulatory_status, forms,\
+            \ allergen_free)\n2. [chem]     PubChem — formula, synonyms, solubility\n\
+            3. [reg]      FDA openFDA — regulatory status, approved uses\n4. [news]\
+            \     Supply chain news — regex-extracted disruption signals\n5. [risk]\
+            \     Risk level (HIGH/MEDIUM/LOW/NONE)\n6. [uploaded] User-uploaded CoA\
+            \ or spec sheet\n7. [inferred] Your own reasoning\n\nRESPONSE RULES:\n\
+            1. Answer the question directly in the first sentence.\n2. Tag every fact:\
+            \ [DB], [chem], [reg], [news], [risk], [uploaded], or [inferred].\n3.\
+            \ Never hallucinate. If a field is null: \"not on record — verify manually.\"\
+            \n4. AGGREGATE ALL DB DATA: NEVER list individual SKUs, companies, or\
+            \ products. You MUST summarize DB findings into exactly ONE sentence.\
+            \ (e.g., \"Prinova USA and Univar supply Citric Acid across 10 companies,\
+            \ impacting 22 finished goods [DB].\")\n5. Flag single-source ingredients\
+            \ (1 supplier) as ⚠ SUPPLY RISK [DB].\n6. If RISK_LEVEL is HIGH or MEDIUM:\
+            \ flag at the very top of the response.\n7. Skip empty data sections silently.\n\
+            8. For ingredient_comparison only, use this exact structure:\n\n   REPLACEABILITY\
+            \ ANALYSIS: [Ingredient]\n   Comparing: [Supplier A] vs [Supplier B]\n\
+            \   SCORE: XX/100 | DECISION: [label]\n\n   | Field          | [Supplier\
+            \ A] | [Supplier B] | Match |\n   |----------------|--------------|--------------|-------|\n\
+            \   | Grade          | ...          | ...          | Y/N/? |\n   | Purity\
+            \         | ...          | ...          | Y/N/? |\n   | Certifications\
+            \ | ...          | ...          | Y/N/? |\n   | Regulatory     | ... \
+            \         | ...          | Y/N/? |\n   | Forms          | ...        \
+            \  | ...          | Y/N/? |\n\n   RISK FLAGS: [list or None]\n   SUPPLY\
+            \ DISRUPTION: [from news + risk]\n   BOM IMPACT: [affected finished goods]\n\
+            \   RECOMMENDATION: [1 sentence]\n\n--- DB DATA (intent: {{#test_intent_extractor.intent#}})\
+            \ ---\n{{#context_query.body#}}\n\n--- CHEMICAL IDENTITY ---\n{{#pubchem_query.body#}}\n\
+            \n--- REGULATORY STATUS ---\n{{#regulatory_query.body#}}\n\n--- SUPPLY\
+            \ CHAIN NEWS ---\n{{#news_formatter.signals_text#}}\n\n--- RISK CLASSIFICATION\
+            \ ---\n{{#risk_classifier.text#}}\n\n--- UPLOADED DOCUMENT ---\n{{#doc_parser.text#}}"
+        - id: user_agnes
+          role: user
+          text: '{{#sys.query#}}'
+        selected: false
+        title: Agnes Response
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 163
+      id: agnes_response
+      position:
+        x: 1900
+        y: 400
+      positionAbsolute:
+        x: 1900
+        y: 400
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        context:
+          enabled: false
+          variable_selector: []
+        desc: Simulates disruption impact and proposes concrete actions grounded in
+          DB data. Always produces action guidance. Never hallucinate.
+        model:
+          completion_params:
+            max_tokens: 600
+            temperature: 0.3
+          mode: chat
+          name: claude-opus-4-20250514
+          provider: langgenius/anthropic/anthropic
+        prompt_template:
+        - id: sys_sim
+          role: system
+          text: 'You are a supply chain action advisor working alongside Agnes.
+
+
+            RULES:
+
+            1. Only reference suppliers, ingredients, and finished goods present in
+            the DB data below. Never invent names, quantities, or lead times.
+
+            2. Always produce output — every query deserves action guidance.
+
+            3. Aggregate data intelligently: Do not list out individual SKUs. Speak
+            in high-level summaries.
+
+            4. If supplier risk or disruption is present: write exactly 1 sentence
+            describing what would realistically cascade. Then list the 2 most exposed
+            ingredients.
+
+            5. If no risk is present: skip the cascade paragraph entirely. Do NOT
+            summarize the situation.
+
+            6. Always end with exactly this block:
+
+
+            **Recommended actions:**
+
+            • [1 short urgent action]
+
+            • [1 short medium-term action]
+
+            • [1 short strategic action]
+
+
+            Output must be EXTREMELY concise — absolute max 60 words total. Do not
+            add conversational filler.
+
+
+            AGNES ANALYSIS:
+
+            {{#agnes_response.text#}}
+
+
+            DB DATA:
+
+            {{#context_query.body#}}
+
+
+            RISK CLASSIFICATION:
+
+            {{#risk_classifier.text#}}'
+        - id: user_sim
+          role: user
+          text: '{{#sys.query#}}'
+        selected: true
+        title: Scenario Simulator
+        type: llm
+        variables: []
+        vision:
+          enabled: false
+      height: 163
+      id: scenario_simulator
+      position:
+        x: 2200
+        y: 400
+      positionAbsolute:
+        x: 2200
+        y: 400
+      selected: true
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    - data:
+        answer: '{{#agnes_response.text#}}
+
+          {{#scenario_simulator.text#}}'
+        desc: Streams Agnes response and action recommendations to the user interface
+        selected: false
+        title: Answer
+        type: answer
+      height: 164
+      id: answer
+      position:
+        x: 2500
+        y: 400
+      positionAbsolute:
+        x: 2500
+        y: 400
+      selected: false
+      sourcePosition: right
+      targetPosition: left
+      type: custom
+      width: 242
+    viewport:
+      x: -86.04228185971135
+      y: 234.49818577207787
+      zoom: 0.36944588620778057
+  rag_pipeline_variables: []
